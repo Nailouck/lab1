@@ -1,17 +1,5 @@
 #include <stdio.h>
-int lcm(int n1, int n2) { //Функция поиска наименьшего общего кратного (далее - НОК) двух чисел (least common multiple).
-	int max; //Максимальное число из двух.
-	if (n1 > n2) max = n1;
-	else max = n2;
-	int i = max - 1;
-	int ans;
-	do { //Цикл перебирает значения i, начиная от max - 1 (чтобы учесть ситуацию НОК = max), и выбирает то наименьшее из них, которое делится на оба числа.
-		ans = i;
-		i++;
-	}
-	while (ans % n1 != 0 or ans % n2 != 0);
-	return ans;
-}
+#include "math_alh.h"
 	int main() {
 		int m;
 		do scanf("%d", &m); //Наибольшая порция печенек.
